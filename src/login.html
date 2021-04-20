@@ -67,27 +67,28 @@
     </style>
 </head>
 <body>
-
-<h2>Login Form</h2>
+<div class="imgcontainer">
+<p>Wpisz numer albumu lub email oraz haslo i zaloguj sie do systemu Code T</p>
+</div>
 
 <form action="/action_page.php" method="post">
 
     <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="uname"><b>Email lub numer albumu</b></label>
+        <input type="text" placeholder="Wpisz email lub numer albumu" name="uname" required>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="psw"><b>Haslo</b></label>
+        <input type="password" placeholder="Wpisz haslo" name="psw" required>
 
         <button type="submit">Login</button>
         <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
+            <input type="checkbox" checked="checked" name="remember"> Zapamietaj mnie
         </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <button type="button" class="cancelbtn">Anuluj</button>
+        <span class="psw">Zapomniales <a href="#">hasla?</a></span>
     </div>
 </form>
 
