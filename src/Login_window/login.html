@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style_login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="leftBox">
+            <img class="header_logo" src="../Assets/logoBlack.png" height="30px" width="auto">
+        </div>
+
+        <div class="rightBox">
+            <table align="center" >
+                <tr >
+                    <th><a class="header_text" href="">Kliknij, aby się zalogować</a></th>
+                    <th><img class="header_logo" src="../Assets/user.png" height="50px" width="auto"></th>
+                    <th> <div class="arrow-down"></div></th>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</header>
+<div class="imgcontainer">
+    <img class="header_logo" src="../Assets/logoBlack.png" height="80px" width="auto">
+</div>
+<div class="container">
+    <form  action="/action_page.php" method="post">
+
+        <div >
+            <label for="psw" ><b>Wpisz login (numer albumu albo email) oraz hasło i zaloguj się do systemu Dante.</b></label>
+            <input type="text" placeholder="Adres email" name="uname" required>
+
+            <input type="password" placeholder="Hasło" name="psw" required>
+
+            <button type="submit">Zaloguj</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Zapamietaj mnie
+            </label>
+        </div>
+
+        <div  >
+            <button type="button" class="cancelbtn">Anuluj</button>
+            <span class="psw"><a href="#">Załóż konto</a> lub <a href="#">Odzyskaj hasło</a></span>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
