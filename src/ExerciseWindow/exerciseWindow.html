@@ -5,27 +5,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<script>
+    function showHints() {
+        document.getElementById("hintsList").style.display = "block";
+        document.getElementById("showHintsButton").style.display = "none";
+    }
+</script>
 <body>
 <header>
     <div class="header">
         <div class="leftBox">
-            <img class="header_logo" src="../Assets/logoBlack.png" height="30px" width="auto">
+            <img class="header_logo" height="30px" src="../Assets/logoBlack.png" width="auto">
         </div>
 
         <div class="rightBox">
-            <table align="center" >
-                <tr >
+            <table align="center">
+                <tr>
                     <th><a class="header_text" href="">Kliknij, aby się zalogować</a></th>
-                    <th><img class="header_logo" src="../Assets/user.png" height="50px" width="auto"></th>
-                    <th> <div class="arrow-down"></div></th>
+                    <th><img class="header_logo" height="50px" src="../Assets/user.png" width="auto"></th>
+                    <th>
+                        <div class="arrow-down"></div>
+                    </th>
                 </tr>
             </table>
 
         </div>
     </div>
 </header>
-<h1 class = "exerciseTitle">
-    Zadanie1
+<h1 class="exerciseTitle">
+    ExerciseName
 </h1>
 
 <div id="exerciseHeader">
@@ -36,7 +44,7 @@
     <div id="difficulty">3/5</div>
     <div id="statusInfo"><h3>Status</h3></div>
     <div id="status">
-        waiting
+        waiting for files
         <!--  https://loading.io/css/      -->
         <div class="lds-ring">
             <div></div>
@@ -47,7 +55,9 @@
     </div>
     <div id="selectFilesInfo"><h3> Upload your files</h3></div>
     <div id="selectFiles">
-        <div><button>Select files from disk</button></div>
+        <div>
+            <button>Select files from disk</button>
+        </div>
     </div>
 
     <div id="send">
@@ -58,15 +68,45 @@
 
 </div>
 
-<p class="exerciseInfo">
-    Tresc zadania asdasdasdasdasdasdasdasdasd asda ds asd asd
-    Tresc zadania asdasdasdasdasdasdasdasdasd asda ds asd asd
-    Tresc zadania asdasdasdasdasdasdasdasdasd asda ds asd asd
-    Tresc zadania asdasdasdasdasdasdasdasdasd asda ds asd asd
-    Tresc zadania asdasdasdasdasdasdasdasdasd asda ds asd asd
-    Tresc zadania asdasdasdasdasdasdasdasdasd asda ds asd asd
+<div class="exerciseInfo">
+    <h1>
+        Exercise details:
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+        Integer nec odio. Praesent libero.<br>
+        Sed cursus ante dapibus diam. Sed nisi.<br>
+        Nulla quis sem at nibh elementum imperdiet.<br>
+        Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.<br>
+        Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos.<br>
+        Curabitur sodales ligula in libero.
+    </p>
+    <div id="requirements">
+        <h2>
+            Requirements:
+        </h2>
+        <ul>
+            <li>Use .... function</li>
+            <li>Implement doubly linked list</li>
+            <li>Program must compile!</li>
+        </ul>
+
+    </div>
 
 
-</p>
+    <div id="hints">
+        <h3>
+            Hints:
+        </h3>
+        <button id="showHintsButton" onclick="showHints()">
+            click to show
+        </button>
+
+        <ul id="hintsList">
+            <li>use gson library</li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
