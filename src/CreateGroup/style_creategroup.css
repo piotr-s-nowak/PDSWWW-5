@@ -1,0 +1,215 @@
+body {margin:0px;font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 6px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    border-radius: 8px;
+    background-color: #f44336;
+}
+label{
+    color:#686868;
+}
+p{
+    color:#686868;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 100%;
+}
+.labelText{
+    text-align: center;
+    padding-top: 20px;
+    alignment: center;
+}
+/* Add padding to container elements */
+
+.imgcontainer {
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
+}
+form {
+    border:none;
+}
+.container{
+
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+header{
+    height:75px;
+    margin: 0px;
+    background-color: #5286E8 ;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration-line: underline;
+}
+.leftBox{
+    float:left;
+
+    text-align:center;
+    line-height: 75px;
+    width: 50%;
+}
+.rightBox{
+
+    float: right;
+    text-align:center;
+    line-height: 75px;
+    width: 50%;
+}
+.header_logo{
+    vertical-align: middle;
+}
+.header_text{
+    vertical-align: middle;
+    padding-right: 10px;
+    color: #f1f1f1;
+}
+.arrow-down
+{
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-top: 5px solid #FFFFFF;
+}
+table {
+    border-spacing: 0px;
+
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+
+    width: 60px;
+    height: 44px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 10px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+select:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+select:checked + .slider {
+    background-color: #2196F3;
+}
+
+select:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+select:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
