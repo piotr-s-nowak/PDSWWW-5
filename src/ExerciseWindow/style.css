@@ -1,0 +1,161 @@
+body {
+    background-color: aqua;
+}
+
+#exerciseHeader {
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #dddddd;
+    background-color: white;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+    'deadlineInfo difficultyInfo statusInfo filesInfo filesInfo filesInfo empty empty'
+        'line1 line1 line1 line1 line1 line1 line1 line1'
+
+    'deadline difficulty status files files files send send'
+    'line2 line2 line2 line2 line2 line2 line2 line2';
+}
+
+#exerciseHeader > div {
+    /*background-color: red;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exerciseInfo {
+    background-color: #4CAF50;
+}
+
+#deadlineInfo {
+    grid-area: deadlineInfo;
+
+}
+
+#deadline {
+    grid-area: deadline;
+
+}
+
+#difficultyInfo {
+    grid-area: difficultyInfo;
+
+}
+
+#difficulty {
+    grid-area: difficulty;
+
+
+}
+
+#statusInfo {
+    grid-area: statusInfo;
+}
+
+#status {
+    grid-area: status;
+}
+
+#selectFilesInfo {
+    grid-area: filesInfo;
+
+}
+
+#selectFiles {
+    grid-area: files;
+
+}
+#selectFiles > div {
+    margin: 10px;
+    height: 80px;
+    width: 100%;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#selectFiles >div > button {
+    font-size: 22px;
+    color: white;
+    background-color: #4d4d4d;
+
+}
+
+#send {
+    grid-area: send;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#send button {
+    background-color: #4770eb;
+    color: white;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    height: 75%;
+    position: relative;
+    outline: none;
+}
+
+#send button:hover {
+    background-color: #3d3df5;
+}
+.decorateLine{
+    grid-area: line2;
+    height: 1px;
+    background-color: #4d4d4d;
+}
+.decorateLine1{
+    grid-area: line1;
+    height: 1px;
+    background-color: #4d4d4d;
+}
+ /*wait icon style*/
+/*.lds-ring {*/
+/*    display: none;*/
+/*    position: center;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*}*/
+
+/*.lds-ring div {*/
+/*    box-sizing: border-box;*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    width: 32px;*/
+/*    height: 32px;*/
+/*    margin: 5px;*/
+/*    border: 5px solid #ffffff;*/
+/*    border-radius: 50%;*/
+/*    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;*/
+/*    border-color: #ffffff transparent transparent transparent;*/
+/*}*/
+
+/*.lds-ring div:nth-child(1) {*/
+/*    animation-delay: -0.45s;*/
+/*}*/
+
+/*.lds-ring div:nth-child(2) {*/
+/*    animation-delay: -0.3s;*/
+/*}*/
+
+/*.lds-ring div:nth-child(3) {*/
+/*    animation-delay: -0.15s;*/
+/*}*/
+
+/*@keyframes lds-ring {*/
+/*    0% {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+/* wait icon style ends */
