@@ -46,6 +46,9 @@ button:hover {
 label{
     color:#686868;
 }
+p{
+    color:#686868;
+}
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
     float: left;
@@ -152,6 +155,7 @@ table {
     position: absolute;
     cursor: pointer;
     margin-top: 10px;
+
     top: 0;
     left: 0;
     right: 0;
