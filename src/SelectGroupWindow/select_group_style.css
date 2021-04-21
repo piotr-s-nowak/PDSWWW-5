@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    height:75px;
+    margin: 0px;
+    background-color: #5286E8 ;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration-line: underline;
+}
+.leftBox{
+    float:left;
+
+    text-align:center;
+    line-height: 75px;
+    width: 50%;
+}
+.rightBox{
+
+    float: right;
+    text-align:center;
+    line-height: 75px;
+    width: 50%;
+}
+.header_logo{
+    vertical-align: middle;
+}
+.header_text{
+    vertical-align: middle;
+    padding-right: 10px;
+    color: #f1f1f1;
+}
+.arrow-down
+{
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-top: 5px solid #FFFFFF;
+}
+table {
+    border-spacing: 0px;
+
+}
