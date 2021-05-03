@@ -1,0 +1,127 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    color:#686868;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 6px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin: 6px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    color: white;
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin: 6px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: #f44336;
+}
+form {
+    border-color: #FFFFFF;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+    .leftBox{
+        width: 30%;
+    }
+    .rightBox{
+        width: 70%;
+    }
+}
+header{
+    height:75px;
+    margin: 0px;
+    background-color: #5286E8 ;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration-line: underline;
+}
+.leftBox{
+    float:left;
+
+    text-align:center;
+    line-height: 75px;
+    width: 50%;
+}
+.rightBox{
+
+    float: right;
+    text-align:center;
+    line-height: 75px;
+    width: 50%;
+}
+.header_logo{
+    vertical-align: middle;
+}
+.header_text{
+    vertical-align: middle;
+    padding-right: 10px;
+    color: #f1f1f1;
+}
+.arrow-down
+{
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-top: 5px solid #FFFFFF;
+}
+table {
+    border-spacing: 0px;
+
