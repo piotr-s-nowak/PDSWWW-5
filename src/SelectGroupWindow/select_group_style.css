@@ -59,29 +59,27 @@ table {
 
 .groupsTitle {
     font-size: 40px;
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    float: left;
+
 }
 
 .groupsMain {
     border-radius: 15px;
     height: 100%;
     border: 1px solid #dddddd;
-    margin: 25px;
+    margin-inline: 50px;
     padding: 25px;
 }
 
 #listOfGroups {
     list-style-type: none;
-/
+
 }
 
 #listOfGroups li {
     border: 1px solid #dddddd;
     border-radius: 15px;
     margin-top: 25px;
-    margin-: 25px;
     margin-inline: auto;
     padding: 25px;
     width: 80em;
@@ -94,6 +92,7 @@ table {
     animation-duration: 0.2s;
     height: 100%;
     overflow: hidden;
+    background-color: #e6f2ff;
 }
 
 @keyframes slide {
@@ -117,4 +116,23 @@ table {
     float:right;
     display:inline-block;
 
+}
+.TitleDiv{
+    overflow: hidden;
+    margin: 50px;
+    width:auto;
+    display:flex;
+    align-items: center;
+}
+#Join{
+    vertical-align: middle;
+    float:right;
+    margin-left: auto;
+    padding: 10px 50px;
+    background-color: #00cc00;
+    color: white;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
 }
