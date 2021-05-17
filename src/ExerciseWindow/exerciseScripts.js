@@ -10,7 +10,7 @@ function goBack() {
 var files;
 
 function sendFile() {
-    setDifficulty(4);
+    setDifficulty(1);
     setDeadline("12-13-1234");
     alert('Selected files: ' + files.item(0).name);
     var stat = document.getElementById('status');
