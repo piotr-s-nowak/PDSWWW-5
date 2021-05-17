@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="select_group_style.css" rel="stylesheet">
-<link rel="icon" href="../Assets/codeTIcon.ico">
+<link href="../Assets/codeTIcon.ico" rel="icon">
 <head>
     <meta charset="UTF-8">
     <title>CodeT</title>
+    <script src="lists.js" type="text/javascript"></script>
+
+
 </head>
+
 <body>
 <header>
     <div class="header">
         <div class="leftBox">
-            <img class="header_logo" src="../Assets/logoBlack.png" height="30px" width="auto">
+            <img class="header_logo" height="30px" src="../Assets/logoBlack.png" width="auto">
         </div>
 
         <div class="rightBox">
-            <table align="center" >
-                <tr >
+            <table align="center">
+                <tr>
                     <th><a class="header_text" href="">Kliknij, aby się zalogować</a></th>
-                    <th><img class="header_logo" src="../Assets/user.png" height="50px" width="auto"></th>
-                    <th> <div class="arrow-down"></div></th>
+                    <th><img class="header_logo" height="50px" src="../Assets/user.png" width="auto"></th>
+                    <th>
+                        <div class="arrow-down"></div>
+                    </th>
                 </tr>
             </table>
 
         </div>
     </div>
 </header>
+<h1 class="groupsTitle" onclick="addElements(3);">
+    Select group:
+</h1>
+
+<div class="groupsMain">
+    <ul id="listOfGroups">
+        <li class="listElement">
+
+            <h3 class="GroupName">Nazwa grupy:</h3>
+            <h3 class="Teacher">
+                Prowadzący:
+            </h3>
+
+        </li>
+    </ul>
+</div>
 </body>
 </html>

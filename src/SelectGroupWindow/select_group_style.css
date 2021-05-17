@@ -2,41 +2,48 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-header{
-    height:75px;
+
+header {
+    height: 75px;
     margin: 0px;
-    background-color: #5286E8 ;
+    background-color: #5286E8;
 }
-a{
+
+a {
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration-line: underline;
 }
-.leftBox{
-    float:left;
 
-    text-align:center;
+.leftBox {
+    float: left;
+
+    text-align: center;
     line-height: 75px;
     width: 50%;
 }
-.rightBox{
+
+.rightBox {
 
     float: right;
-    text-align:center;
+    text-align: center;
     line-height: 75px;
     width: 50%;
 }
-.header_logo{
+
+.header_logo {
     vertical-align: middle;
 }
-.header_text{
+
+.header_text {
     vertical-align: middle;
     padding-right: 10px;
     color: #f1f1f1;
 }
-.arrow-down
-{
+
+.arrow-down {
     width: 0;
     height: 0;
     vertical-align: middle;
@@ -45,7 +52,69 @@ a:hover{
 
     border-top: 5px solid #FFFFFF;
 }
+
 table {
     border-spacing: 0px;
+}
+
+.groupsTitle {
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.groupsMain {
+    border-radius: 15px;
+    height: 100%;
+    border: 1px solid #dddddd;
+    margin: 25px;
+    padding: 25px;
+}
+
+#listOfGroups {
+    list-style-type: none;
+/
+}
+
+#listOfGroups li {
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-: 25px;
+    margin-inline: auto;
+    padding: 25px;
+    width: 80em;
+    position: center;
+}
+
+.listElement {
+    display: none;
+    animation-name: slide;
+    animation-duration: 0.2s;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes slide {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+
+}
+.GroupName{
+    margin-left: 50px;
+    float: left;
+}
+.Teacher{
+    vertical-align:top;
+    margin-left: auto;
+    margin-right: 50px;
+
+    float:right;
+    display:inline-block;
 
 }
