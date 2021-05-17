@@ -83,7 +83,13 @@ body {
     justify-content: center;
 
 }
-#selectFiles >div > button {
+input[type="file"] {
+    display:none;
+}
+form{
+
+}
+.custom-file-upload {
     font-size: 20px;
     border-radius: 10px;
 
@@ -94,7 +100,7 @@ body {
     padding: 10px;
 
 }
-#selectFiles >div > button:hover{
+.custom-file-upload:hover{
     background-color: #808080;
 
 
@@ -207,4 +213,30 @@ a:hover{
     background-color: white;
     border: none;
     outline: none;
+}
+#statusImg{
+    width: 10%;
+    height: auto;
+    margin-left: 15px;
+}
+.inner-circle{
+    width: 15px;
+    height: 15px;
+    margin-inline: 3px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2.5px;
+    line-height: 50px;
+    border-color: #00b33c;
+    /*padding: 10px 18px;*/
+    background-color: rgba(0, 0, 0, 0);
+}
+#circle3{
+    border-color: #e6e600;
+}
+#circle4{
+    border-color: #ff9900;
+}
+#circle5{
+    border-color: #ff0000;
 }
