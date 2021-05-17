@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CodeT</title>
-    <script src="lists.js" type="text/javascript"></script>
+    <script src="listScripts.js" type="text/javascript"></script>
 
 
 </head>
@@ -35,7 +35,9 @@
     <h1 class="groupsTitle" onclick="addElements(3);">
         Select group:
     </h1>
-    <button id = "Join">
+    <button id="Join"
+            onClick="location.href='../joinGroup/joinGroup.html'"
+    >
         Join
     </button>
 </div>
@@ -43,8 +45,8 @@
 
 <div class="groupsMain">
     <ul id="listOfGroups">
-        <li class="listElement">
-
+        <li class="listElement"
+        >
             <h3 class="GroupName">Nazwa grupy:</h3>
             <h3 class="Teacher">
                 Prowadzący:

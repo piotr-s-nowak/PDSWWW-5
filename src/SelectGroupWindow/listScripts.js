@@ -4,6 +4,7 @@ function addElement(name,teacher) {
     var list = document.getElementById("listOfGroups");
     var listElement =     document.createElement('li')
     listElement.className = "listElement"
+    listElement.onclick = function(){window.location = "../ExerciseWindow/exerciseWindow.html"}
     listElement.style.display = "block";
     var groupName = document.createElement('h3')
     groupName.className = "GroupName"

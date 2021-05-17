@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="exercise_style.css" rel="stylesheet">
-<link rel="icon" href="../Assets/codeTIcon.ico">
+<link href="../Assets/codeTIcon.ico" rel="icon">
 <head>
     <meta charset="UTF-8">
     <title>CodeT</title>
 </head>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 <script>
     function showHints() {
         document.getElementById("hintsList").style.display = "block";
@@ -57,7 +62,7 @@
     <div id="selectFilesInfo"><h3> Upload your files</h3></div>
     <div id="selectFiles">
         <div>
-            <button>Select files from disk</button>
+            <button onClick=goBack()>Select files from disk</button>
         </div>
     </div>
 

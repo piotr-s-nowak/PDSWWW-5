@@ -89,26 +89,25 @@ body {
 
     border: none;
     color: white;
-    background-color: #808080;
+    background-color: #666666;
     outline: none;
     padding: 10px;
 
 }
 #selectFiles >div > button:hover{
-    background-color: #666666;
+    background-color: #808080;
 
 
 }
 
 #send {
     grid-area: send;
-
     vertical-align: middle;
 
 }
 
 #send button {
-    background-color: #4770eb;
+    background-color: #00cc00;
     color: white;
     font-size: 22px;
     border-radius: 10px;
@@ -120,7 +119,7 @@ body {
 }
 
 #send button:hover {
-    background-color: #3d3df5;
+    background-color: #00e600;
 }
 
 .decorateLine1{
