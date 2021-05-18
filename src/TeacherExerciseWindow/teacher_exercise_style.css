@@ -251,6 +251,7 @@ a:hover {
     border: 1px solid #dddddd;
     border-radius: 15px;
     margin-top: 25px;
+    margin-inline: 50px;
 
 }
 
@@ -320,6 +321,10 @@ a:hover {
 
     margin-bottom: 0;
 
+}
+#listOfStudents{
+    margin:0;
+    padding:0;
 }
 .statusDesc{
 
