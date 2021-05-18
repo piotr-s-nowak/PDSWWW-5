@@ -10,9 +10,11 @@ function goBack() {
 var files;
 
 function sendFile() {
+    var currentTime = new Date();
+
     setDifficulty(1);
     setDeadline("12-13-1234");
-    alert('Selected files: ' + files.item(0).name);
+    alert('Selected files: ' + files.item(0).name +'date: '+currentTime);
     var stat = document.getElementById('status');
     stat.innerHTML = "Waiting for review      <img src=\"../Assets/hourglass.png\" alt=\"status icon\" id = \"statusImg\">";
 
