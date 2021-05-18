@@ -97,7 +97,7 @@ function addElement(name, date) {
 
     var status = document.createElement('h3')
     status.className = "status"
-    status.innerHTML = "&#9989;  &#10068; &#10060;"
+    status.innerHTML = "&#10004;  &#10068; &#10060;"
     listElement.append(status)
 
     var dateElement = document.createElement('h3')
@@ -131,6 +131,32 @@ function addElement(name, date) {
     downloadDesc.innerText = "download code"
     listElement.append(downloadDesc)
 
+    var gradeForm = document.createElement('form')
+    gradeForm.className = "gradeForm"
+    gradeForm.append()
+
+    var gradeLabel = document.createElement('label')
+    gradeLabel.className = "gradeClass"
+    gradeLabel.innerText = "grade:  "
+
+    gradeForm.append(gradeLabel)
+
+    var gradeInp = document.createElement('input')
+    gradeInp.className = "grade"
+    gradeInp.type = "number"
+    gradeInp.name = "grade"
+    gradeInp.min = "2"
+    gradeInp.max = "5"
+    gradeInp.required = true
+    gradeForm.append(gradeInp)
+
+
+    var submitInp = document.createElement('input')
+    submitInp.className = "submitGrade"
+    submitInp.type = "submit"
+    submitInp.value = "✅"
+    gradeForm.append(submitInp)
+    listElement.append(gradeForm)
     list.append(listElement)
 }
 

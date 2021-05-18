@@ -263,8 +263,8 @@ a:hover {
     background-color: #e6f2ff;
 
     grid-template-areas:
-    'Name Upload status placeholder placeholder placeholder placeholder download placeholder2 placeholder2'
-    'Namedesc UploadDesc statusDesc placeholder placeholder placeholder  placeholder downloadDesc  placeholder2 placeholder2';
+    'Name Upload status placeholder placeholder placeholder placeholder download  grade'
+    'Namedesc UploadDesc statusDesc placeholder placeholder placeholder  placeholder downloadDesc   grade';
     /*grid-template-columns: auto auto ;*/
     column-gap: 0px;
     row-gap: 0px;
@@ -328,9 +328,45 @@ a:hover {
 }
 .download{
     grid-area: download;
-
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+.download:hover{
+    cursor: pointer;
 }
 .downloadDesc{
     grid-area: downloadDesc;
 
+}
+.gradeForm{
+    grid-area: grade;
+    display: block;
+    margin: auto;
+}
+.gradeClass{
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-inline-end: 10px;
+}
+
+
+.grade{
+    display: inline-block;
+    font-size: 22px;
+    position: relative;
+    grid-area: grade;
+}
+.submitGrade{
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+.submitGrade:hover{
+    cursor: pointer;
 }
