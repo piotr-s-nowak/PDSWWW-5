@@ -1,3 +1,7 @@
+<?php
+    include("../auth.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <link href="select_group_style.css" rel="stylesheet">
@@ -20,7 +24,8 @@
         <div class="rightBox">
             <table align="center">
                 <tr>
-                    <th><a class="header_text" href="">Kliknij, aby się zalogować</a></th>
+                <th><i>Hello, <?php echo $_SESSION["name"]," ",$_SESSION["surname"];?> &nbsp&nbsp</th>
+                    <th><a class="header_text" href="../logout.php"> Log out </a></th>
                     <th><img class="header_logo" height="50px" src="../Assets/user.png" width="auto"></th>
                     <th>
                         <div class="arrow-down"></div>

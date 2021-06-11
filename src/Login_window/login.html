@@ -6,6 +6,7 @@
     <link href="../Assets/codeTIcon.ico" rel="icon">
     <title>CodeT</title>
 </head>
+
 <body>
 <header>
     <div class="header">
@@ -16,7 +17,7 @@
         <div class="rightBox">
             <table align="center" >
                 <tr >
-                    <th><a class="header_text" href="">Kliknij, aby się zalogować</a></th>
+                    <th><a class="header_text" href="../logout.php">Kliknij, aby się zalogować</a></th>
                     <th><img class="header_logo" src="../Assets/user.png" height="50px" width="auto"></th>
                     <th> <div class="arrow-down"></div></th>
                 </tr>
@@ -28,21 +29,20 @@
 <div class="imgcontainer">
     <img class="header_logo" src="../Assets/logoBlack.png" height="80px" width="auto">
 </div>
-<div class="container">
-    <form  action="/action_page.php" method="post">
 
+<div class="container">
+    <form  action="login.php" method="post">
         <div >
             <label for="psw" ><b>Wpisz login (numer albumu albo email) oraz hasło i zaloguj się do systemu CodeT.</b></label>
-            <input type="text" placeholder="Adres email" name="uname" required>
+            <input type="text" placeholder="Adres email" name="email" required>
 
-            <input type="password" placeholder="Hasło" name="psw" required>
+            <input type="password" placeholder="Hasło" name="password" required>
 
-            <button type="submit">Zaloguj</button>
+            <button type="submit"  >Zaloguj</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Zapamietaj mnie
             </label>
         </div>
-
         <div  >
             <button type="button" class="cancelbtn">Anuluj</button>
             <span class="psw"><a href="#">Załóż konto</a> lub <a href="#">Odzyskaj hasło</a></span>

@@ -88,7 +88,7 @@ function addElement(name, date) {
     var list = document.getElementById("listOfStudents");
     var listElement = document.createElement('li')
     listElement.className = "listElement"
-    // listElement.onclick = function(){window.location = "../ExerciseWindow/exerciseWindow.html"}
+    // listElement.onclick = function(){window.location = "../ExerciseWindow/exerciseWindow.php"}
     listElement.style.display = "grid";
     var studentName = document.createElement('h3')
     studentName.className = "Name"

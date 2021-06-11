@@ -1,13 +1,17 @@
+<?php
+include("../auth.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<link href="exercise_style.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="teacher_exercise_style.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="../Assets/codeTIcon.ico" rel="icon">
 <head>
     <meta charset="UTF-8">
     <title>CodeT</title>
 </head>
-<script src="exerciseScripts.js" type="text/javascript"></script>
+<script src="teacherExerciseScripts.js" type="text/javascript"></script>
 
 <body>
 <header>
@@ -19,7 +23,8 @@
         <div class="rightBox">
             <table align="center">
                 <tr>
-                    <th><a class="header_text" href="">Kliknij, aby się zalogować</a></th>
+                        <th><i>Hello, <?php echo $_SESSION["name"]," ",$_SESSION["surname"];?> &nbsp&nbsp</th>
+                                       <th><a class="header_text" href="../logout.php"> Log out </a></th>
                     <th><img class="header_logo" height="50px" src="../Assets/user.png" width="auto"></th>
                     <th>
                         <div class="arrow-down"></div>
@@ -31,14 +36,9 @@
     </div>
 </header>
 
-<div class="exerciseTitle">
-    <button onClick = goBack() class="fa">&#xf100;</button>
+<div class="exerciseHeader">
+    <button class="fa" onClick=goBack()>&#xf100;</button>
     <h1>ExerciseName</h1>
-
-</div>
-
-<div id="exerciseHeader">
-
     <div id="deadlineInfo"><h3>Deadline</h3></div>
     <div id="deadline">10-10-2021</div>
     <div id="difficultyInfo"><h3>Difficulty</h3></div>
@@ -49,38 +49,12 @@
         <span class="inner-circle" id="circle4"></span>
         <span class="inner-circle" id="circle5"></span>
     </div>
-    <div id="statusInfo"><h3>Status</h3></div>
-    <div id="status">
-        Waiting for upload
-        <img alt="status icon" id="statusImg" src="../Assets/upload.png">
-    </div>
-
-    <div id="selectFilesInfo"><h3> Upload your files</h3></div>
-
-
-    <div id="selectFiles">
-        <div>
-            <!--            <button onClick=goBack()>Select files from disk</button>-->
-            <label class="custom-file-upload" for="file-upload" id="selectLabel">
-                Select files from disk
-                <input id="file-upload" multiple name="myfiles" onchange="showname()" required type="file">
-            </label>
-        </div>
-    </div>
-
-    <div id="send">
-        <button onClick="sendFile()" type="submit">Send</button>
-
-    </div>
-    <div class="decorateLine1"></div>
-
 </div>
 
+
 <div class="exerciseInfo">
-    <h1>
-        Exercise details:
-    </h1>
-    <p>
+    <button class="collapsible" onclick=openCollapsible() type="button">&#11167; <b>Exercise details:<b></b></button>
+    <p class="show" id="content">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
         Integer nec odio. Praesent libero.<br>
         Sed cursus ante dapibus diam. Sed nisi.<br>
@@ -90,7 +64,7 @@
         inceptos himenaeos.<br>
         Curabitur sodales ligula in libero.
     </p>
-    <div id="requirements">
+    <div class="show" id="requirements">
         <h2>
             Requirements:
         </h2>
@@ -100,7 +74,7 @@
             <li>Program must compile!</li>
         </ul>
     </div>
-    <div id="hints">
+    <div class="show" id="hints">
         <h3>
             Hints:
         </h3>
@@ -112,6 +86,28 @@
             <li>use gson library</li>
         </ul>
     </div>
+</div>
+<div class="studentList">
+    <h1 onclick="addElements(15)">Students:</h1>
+    <ul id="listOfStudents">
+        <li class="listElement"
+        >
+            <h3 class="Name"></h3>
+            <h4 class="NameDesc"> Name</h4>
+            <h3 class="uploadDate"></h3>
+            <h4 class="DateDesc"> UploadDate:</h4>
+            <h3 class="status"></h3>
+            <h4 class="statusDesc"> UploadDate:</h4>
+            <button class="download"></button>
+            <h4 class="downloadDesc">:</h4>
+            <form action="/action_page.php" class = "gradeForm">
+                <label for="grade" class = gradeClass>set grade:</label>
+                <input type="number" id = "grade" class ="grade" name="grade" min="1" max="5" required>
+                <input type="submit" class ="submitGrade">
+            </form>
+        </li>
+    </ul>
+
 </div>
 </body>
 </html>

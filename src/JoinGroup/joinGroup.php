@@ -1,3 +1,8 @@
+<?php
+//include auth.php file on all secure pages
+include("../auth.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +21,8 @@
         <div class="rightBox">
             <table align="center" >
                 <tr >
-                    <th><a class="header_text" href="">Kliknij, aby się zalogować</a></th>
+                  <th><i>Hello, <?php echo $_SESSION["name"]," ",$_SESSION["surname"];?> &nbsp&nbsp</th>
+                                    <th><a class="header_text" href="../logout.php"> Log out </a></th>
                     <th><img class="header_logo" src="../Assets/user.png" height="50px" width="auto"></th>
                     <th> <div class="arrow-down"></div></th>
                 </tr>
