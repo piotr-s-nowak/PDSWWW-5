@@ -12,6 +12,7 @@ include("../auth.php");
     <link rel="icon" href="../Assets/codeTIcon.ico">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <link href="style_creategroup.css" rel="stylesheet" type="text/css">
+    <link href="create_group.php" rel="script"
 </head>
 <script>
 function goBack() {
@@ -42,7 +43,7 @@ function goBack() {
     <img class="header_logo" src="../Assets/logoBlack.png" height="80px" width="auto">
 </div>
 <div class="container">
-    <form action="/action_page.php" >
+    <form action="create_group.php" method="post" >
         <div >
 
             <label class="labelText">Podaj dane aby utworzyć grupę.</label>
@@ -70,7 +71,7 @@ function goBack() {
             <input type="checkbox" id="lang6" name="lang6" value="C#">
             <label for="lang6"> C#</label><br><br>
             <div class="clearfix">
-                <button type="submit" class="signupbtn">Utwóż grupę</button>
+                <button type="submit" name ="submit" class="signupbtn">Utwóż grupę</button>
             </div>
             <div class="clearfix">
                 <button type="button" class="cancelbtn" onclick = goBack()>Anuluj</button>
