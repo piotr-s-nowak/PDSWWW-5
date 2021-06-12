@@ -31,7 +31,7 @@ if(isset($_POST['signup']))
     $insert->bindParam(':pass',$pass);
     $insert->bindParam(':isteacher',$isteacher);
     $insert->execute();
-    header("Location: ../SelectGroupWindow/groupWindow.html");
+    header("Location: ../SelectGroupWindow/groupWindow.php");
 
 }
 

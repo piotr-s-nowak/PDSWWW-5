@@ -1,5 +1,6 @@
 <?php
     include("../auth.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -37,13 +38,15 @@
     </div>
 </header>
 <div class="TitleDiv">
-    <h1 class="groupsTitle" onclick="addElements(3);">
+    <h1 class="groupsTitle" onclick="addElements(3,1);">
         Select group:
     </h1>
     <button id="Join"
-            onClick="location.href='../joinGroup/joinGroup.html'"
+            onClick=
+
+            <?php if(  $_SESSION['isteacher'] ==1 ) {echo "location.href='../CreateGroup/createGroup.php'";}else{ echo  "location.href='../joinGroup/joinGroup.php'";}  ?>
     >
-        Join
+       <?php if(  $_SESSION['isteacher'] ==1 ) {echo 'Create new group';}else{ echo 'Join to group';}  ?>
     </button>
 </div>
 
@@ -61,4 +64,6 @@
     </ul>
 </div>
 </body>
+
 </html>
+

@@ -14,13 +14,14 @@ if (isset($_POST['email'])){
     $query = "SELECT * FROM `user` WHERE email='$email' and password = '$pass'";
 	$result = mysqli_query($con,$query) or die(mysqli_error($con));
 	$rows = mysqli_num_rows($result);
-    if($rows==1){
+    if($rows>=1){
         $row = mysqli_fetch_array($result);
         $_SESSION['name'] = $row['name'];
         $_SESSION['surname'] = $row['surname'];
         $_SESSION['email'] = $email;
         $_SESSION['isteacher'] =  $row['isteacher'];
         // Redirect user to index.php
+        echo
         header("Location: ../SelectGroupWindow/groupWindow.php");
     }
     else{

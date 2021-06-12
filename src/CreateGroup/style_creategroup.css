@@ -9,6 +9,10 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+.boxes{
+    background-color: red;
+    display:none;
+}
 
 input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;

@@ -1,6 +1,9 @@
 <?php
 //include auth.php file on all secure pages
 include("../auth.php");
+    if(intval($_SESSION['isteacher'])===1){
+         echo "<script>history.go(-1)</script>";
+        }
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +14,11 @@ include("../auth.php");
     <link href="../Assets/codeTIcon.ico" rel="icon">
     <title>CodeT</title>
 </head>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 <body>
 <header>
     <div class="header">
@@ -50,7 +58,7 @@ include("../auth.php");
         </div>
 
         <div>
-            <button type="button" class="cancelbtn">Anuluj</button>
+            <button type="button" class="cancelbtn" onclick=goBack()>Anuluj</button>
         </div>
     </form>
 </div>

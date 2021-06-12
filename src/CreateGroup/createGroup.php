@@ -1,6 +1,9 @@
 <?php
 //include auth.php file on all secure pages
 include("../auth.php");
+    if(intval($_SESSION['isteacher'])===0){
+         echo "<script>history.go(-1)</script>";
+        }
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +13,11 @@ include("../auth.php");
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <link href="style_creategroup.css" rel="stylesheet" type="text/css">
 </head>
-
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 <body>
 <header>
     <div class="header">
@@ -49,8 +56,7 @@ include("../auth.php");
             <input type="text" placeholder="Podaj token" name="token" required>
 
             <input type="text" placeholder="Powtórz token" name="token-repeat" required>
-
-            <label class="labelText">Podaj akceptowane języki.<label><br>
+            <legend class="labelText">Podaj akceptowane języki.</legend><br>
             <input type="checkbox" id="lang1" name="lang1" value="All">
             <label for="lang1"> Wszystkie</label><br>
             <input type="checkbox" id="lang2" name="lang2" value="Java">
@@ -63,12 +69,11 @@ include("../auth.php");
             <label for="lang5"> JavaScript</label><br>
             <input type="checkbox" id="lang6" name="lang6" value="C#">
             <label for="lang6"> C#</label><br><br>
-
             <div class="clearfix">
                 <button type="submit" class="signupbtn">Utwóż grupę</button>
             </div>
             <div class="clearfix">
-                <button type="button" class="cancelbtn">Anuluj</button>
+                <button type="button" class="cancelbtn" onclick = goBack()>Anuluj</button>
             </div>
         </div>
     </form>

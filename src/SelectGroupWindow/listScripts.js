@@ -1,10 +1,18 @@
 var elementCount = 0;
 const ANIMATION_DELAY = 100;
-function addElement(name,teacher) {
+
+
+
+function addElement(name,teacher,isteacher) {
     var list = document.getElementById("listOfGroups");
     var listElement =     document.createElement('li')
     listElement.className = "listElement"
-    listElement.onclick = function(){window.location = "../ExerciseWindow/exerciseWindow.php"}
+    if(isteacher === '1'){
+        listElement.onclick = function(){window.location.href = "../TeacherExerciseWindow/TeacherExerciseWindow.php"}
+
+    }else{
+        listElement.onclick = function(){window.location.href = "../ExerciseWindow/exerciseWindow.php"}
+    }
     listElement.style.display = "block";
     var groupName = document.createElement('h3')
     groupName.className = "GroupName"
@@ -26,7 +34,7 @@ function addElementToList(){
     setTimeout(addElement,ANIMATION_DELAY*elementCount)
     elementCount+=1;
 }
-function addElements(count){
+function addElements(count,isteacher){
     var animDelay = 0;
     for (var i = 0;i<count;i++){
         setTimeout(function(){

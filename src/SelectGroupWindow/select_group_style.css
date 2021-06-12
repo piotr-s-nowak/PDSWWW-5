@@ -136,3 +136,8 @@ table {
     border: none;
     outline: none;
 }
+
+#Join :hover{
+    cursor: crosshair;
+
+}

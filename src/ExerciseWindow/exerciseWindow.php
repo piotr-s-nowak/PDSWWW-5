@@ -1,6 +1,10 @@
 <?php
 //include auth.php file on all secure pages
 include("../auth.php");
+    if(intval($_SESSION['isteacher'])===1){
+         echo "<script>history.go(-1)</script>";
+        }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

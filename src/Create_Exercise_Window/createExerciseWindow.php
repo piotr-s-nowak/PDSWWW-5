@@ -1,5 +1,8 @@
 <?php
     include("../auth.php");
+    if(intval($_SESSION['isteacher'])===0){
+         echo "<script>history.go(-1)</script>";
+        }
 ?>
 <!DOCTYPE html>
 <html>
