@@ -5,14 +5,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<link href="select_group_style.css" rel="stylesheet">
+<link href="select_exercise_style.css" rel="stylesheet">
 <link href="../Assets/codeTIcon.ico" rel="icon">
 <head>
     <meta charset="UTF-8">
     <title>CodeT</title>
-    <script src="listScripts.js" type="text/javascript"></script>
-
-
+    <script src="exerciseScripts.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -25,7 +23,7 @@
         <div class="rightBox">
             <table align="center">
                 <tr>
-                <th><i>Hello, <?php echo $_SESSION["name"]," ",$_SESSION["surname"];?> &nbsp&nbsp</th>
+                    <th><i>Hello, <?php echo $_SESSION["name"]," ",$_SESSION["surname"];?> &nbsp&nbsp</th>
                     <th><a class="header_text" href="../logout.php"> Log out </a></th>
                     <th><img class="header_logo" height="50px" src="../Assets/user.png" width="auto"></th>
                     <th>
@@ -38,16 +36,15 @@
     </div>
 </header>
 <div class="TitleDiv">
-    <h1 class="groupsTitle" onclick =addElements(3)
-
-        >
-        Select group:
+    <h1 class="groupsTitle" onclick =addElements(3,1)
+    >
+        Select exercise:
     </h1>
-    <button id="Join"
-            onClick=
-           <?php if(  $_SESSION['isteacher'] ==1 ) {echo "location.href='../CreateGroup/createGroup.php'";}else{ echo  "location.href='../joinGroup/joinGroup.php'";}  ?>>
-       <?php if(  $_SESSION['isteacher'] ==1 ) {echo 'Create new group';}else{ echo 'Join to group';}  ?>
-    </button>
+     <?php if(  $_SESSION['isteacher'] ==1 ) {
+        $link = "window.location.href='../Create_Exercise_Window/createExerciseWindow.php'";
+        echo '<button id="Join" onClick='.$link.' > Create new Exercise </button>';
+     }?>
+
 </div>
 
 
@@ -55,7 +52,7 @@
     <ul id="listOfGroups">
         <li class="listElement"
         >
-            <h3 class="GroupName">Nazwa grupy:</h3>
+            <h3 class="GroupName">Nazwa Cwiczenia:</h3>
             <h3 class="Teacher">
                 Prowadzący:
             </h3>

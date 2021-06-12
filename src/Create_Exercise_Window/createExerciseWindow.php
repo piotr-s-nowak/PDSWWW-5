@@ -12,7 +12,11 @@
     <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport">
     <link href="style_create_exercise.css" rel="stylesheet" type="text/css">
 </head>
-
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 <body>
 <header>
     <div class="header">
@@ -71,7 +75,7 @@
                 <button class="signupbtn" type="submit">Utwóż zadanie</button>
             </div>
             <div class="clearfix">
-                <button class="cancelbtn" type="button">Anuluj</button>
+                <button class="cancelbtn" type="button" onclick = goBack()>Anuluj</button>
             </div>
         </div>
     </form>
