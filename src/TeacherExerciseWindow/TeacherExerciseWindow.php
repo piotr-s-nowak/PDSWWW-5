@@ -3,6 +3,12 @@ include("../auth.php");
      if(intval($_SESSION['isteacher'])===0){
          echo "<script>history.go(-1)</script>";
         }
+    require("../db.php");
+
+    $exercise_id =  $_COOKIE["exerciseID"];
+    $query = "SELECT * FROM `exercise` WHERE id='$exercise_id'";
+    $result = mysqli_query($con,$query) or die(mysqli_error($con));
+    $row = mysqli_fetch_array($result);
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +47,9 @@ include("../auth.php");
 
 <div class="exerciseHeader">
     <button class="fa" onClick=goBack()>&#xf100;</button>
-    <h1>ExerciseName</h1>
+    <h1><?php echo $row['name']  ?></h1>
     <div id="deadlineInfo"><h3>Deadline</h3></div>
-    <div id="deadline">10-10-2021</div>
+    <div id="deadline"><?php echo $row['deadline']  ?></div>
     <div id="difficultyInfo"><h3>Difficulty</h3></div>
     <div id="difficulty">
         <span class="inner-circle"></span>
@@ -58,23 +64,20 @@ include("../auth.php");
 <div class="exerciseInfo">
     <button class="collapsible" onclick=openCollapsible() type="button">&#11167; <b>Exercise details:<b></b></button>
     <p class="show" id="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
-        Integer nec odio. Praesent libero.<br>
-        Sed cursus ante dapibus diam. Sed nisi.<br>
-        Nulla quis sem at nibh elementum imperdiet.<br>
-        Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.<br>
-        Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos.<br>
-        Curabitur sodales ligula in libero.
+        <?php echo $row['description']  ?>
     </p>
     <div class="show" id="requirements">
         <h2>
             Requirements:
         </h2>
         <ul>
-            <li>Use .... function</li>
-            <li>Implement doubly linked list</li>
-            <li>Program must compile!</li>
+            <?php
+                $all_requirements = $row['requirements'];
+                $rows = explode("\n", $all_requirements);
+                foreach ($rows as &$line){
+                    echo '<li>'.$line.'</li>';
+                }
+            ?>
         </ul>
     </div>
     <div class="show" id="hints">
@@ -86,7 +89,13 @@ include("../auth.php");
         </button>
 
         <ul id="hintsList">
-            <li>use gson library</li>
+            <?php
+                $all_hints = $row['hints'];
+                $rows = explode("\n", $all_hints);
+                foreach ($rows as &$line){
+                    echo '<li>'.$line.'</li>';
+                }
+            ?>
         </ul>
     </div>
 </div>
