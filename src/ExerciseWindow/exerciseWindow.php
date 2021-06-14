@@ -10,6 +10,7 @@
     $query = "SELECT * FROM `exercise` WHERE id='$exercise_id'";
     $result = mysqli_query($con,$query) or die(mysqli_error($con));
     $row = mysqli_fetch_array($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -130,4 +131,7 @@
     </div>
 </div>
 </body>
+<?php
+    echo '<script>setDifficulty('.$row['difficulty'].')</script>'
+?>
 </html>

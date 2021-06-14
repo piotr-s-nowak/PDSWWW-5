@@ -122,4 +122,7 @@ include("../auth.php");
 
 </div>
 </body>
+<?php
+    echo '<script>setDifficulty('.$row['difficulty'].')</script>'
+?>
 </html>

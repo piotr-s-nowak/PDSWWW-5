@@ -9,8 +9,10 @@ function addElement(name,teacher,exerciseID,isteacher) {
     var listElement =     document.createElement('li')
     listElement.className = "listElement"
     if(isteacher === 1){
-        createCookie("exerciseID",exerciseID,1);
-        listElement.onclick = function(){window.location.href = "../TeacherExerciseWindow/TeacherExerciseWindow.php"}
+
+        listElement.onclick = function(){
+            createCookie("exerciseID",exerciseID,1);
+            window.location.href = "../TeacherExerciseWindow/TeacherExerciseWindow.php"}
     }else{
         listElement.onclick = function(){
             createCookie("exerciseID",exerciseID,1);

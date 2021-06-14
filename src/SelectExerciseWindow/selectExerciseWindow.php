@@ -40,8 +40,7 @@
     </div>
 </header>
 <div class="TitleDiv">
-    <h1 class="groupsTitle" onclick =addElements(3,1)
-    >
+    <h1 class="groupsTitle">
         Select exercise:
     </h1>
      <?php if(  $_SESSION['isteacher'] ==1 ) {
