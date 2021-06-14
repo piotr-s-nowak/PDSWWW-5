@@ -3,16 +3,18 @@ const ANIMATION_DELAY = 100;
 
 
 
-function addElement(name,teacher,isteacher) {
+function addElement(name,teacher,exerciseID,isteacher) {
 
     var list = document.getElementById("listOfGroups");
     var listElement =     document.createElement('li')
     listElement.className = "listElement"
     if(isteacher === 1){
+        createCookie("exerciseID",exerciseID,1);
         listElement.onclick = function(){window.location.href = "../TeacherExerciseWindow/TeacherExerciseWindow.php"}
-
     }else{
-        listElement.onclick = function(){window.location.href = "../ExerciseWindow/exerciseWindow.php"
+        listElement.onclick = function(){
+            createCookie("exerciseID",exerciseID,1);
+            window.location.href = "../ExerciseWindow/exerciseWindow.php"
         }
     }
     listElement.style.display = "block";
@@ -27,9 +29,6 @@ function addElement(name,teacher,isteacher) {
     teacherElement.innerText = "Deadline: "+teacher
     listElement.append(teacherElement)
 
-    // listElement.childNodes.item("GroupName").style.backgroundColor = "black"
-    // listElement.childNodes.item("Teacher").style.backgroundColor = "black"
-    // list.innerHTML += "<li>"+listHTML+"</li>"
     list.append(listElement)
 }
 function addElementToList(){
@@ -45,5 +44,18 @@ function addElements(count,isteacher){
         },ANIMATION_DELAY*animDelay++)
 
     }
+}
+
+function createCookie(name, value, days) {
+    var expires;
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+    document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
 }
 // const listHTML = "sa"
