@@ -1,6 +1,7 @@
 <?php
     include("../auth.php");
-
+    include("../db.php");
+   
 ?>
 
 <!DOCTYPE html>
@@ -10,17 +11,18 @@
 <head>
     <meta charset="UTF-8">
     <title>CodeT</title>
-    <script src="listScripts.js" type="text/javascript"></script>
-
+   <script src="listScripts.js" type="text/javascript"></script>
 
 </head>
 
 <body>
+
 <header>
     <div class="header">
         <div class="leftBox">
             <img class="header_logo" height="30px" src="../Assets/logoBlack.png" width="auto">
         </div>
+
         <div class="rightBox">
             <table align="center">
                 <tr>
@@ -59,10 +61,37 @@
                 Prowadzący:
             </h3>
 
-        </li>
+       </li>
+       
+     
+   	 <?php 
+   	 $tutor = $_SESSION["email"];
+   	 $query = "SELECT * FROM groups WHERE tutor='$tutor'";
+   	 $results = mysqli_query($con,$query) or die(mysqli_error($con));
+   	 $rows = array();
+   	  while ($row = mysqli_fetch_array($results)) {
+     	 $rows[] = $row;
+    }
+    
+    echo '<script>';
+   foreach ($rows as &$row) {
+	        $name = $row['name'];
+	        $tutor = $row['tutor'];
+	        
+        	echo 'addElement("'.$name.'","'.$tutor.'");';
+    }
+   
+    echo '</script>';
+	
+   	 
+
+	?>
+      
     </ul>
+     
 </div>
 </body>
 
 </html>
+
 
