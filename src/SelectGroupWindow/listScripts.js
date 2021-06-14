@@ -4,7 +4,6 @@ const ANIMATION_DELAY = 100;
 
 
 function addElement(name,teacher) {
-
     var list = document.getElementById("listOfGroups");
     var listElement =     document.createElement('li')
     listElement.className = "listElement"
@@ -29,6 +28,16 @@ function addElement(name,teacher) {
 function addElementToList(){
     setTimeout(addElement,ANIMATION_DELAY*elementCount)
     elementCount+=1;
+}
+function addElements(count){
+
+    var animDelay = 0;
+    for (var i = 0;i<count;i++){
+        setTimeout(function(){
+            addElement("name #"+elementCount,"name #"+elementCount++)
+        },ANIMATION_DELAY*animDelay++)
+
+    }
 }
 function addElements(count){
 

@@ -43,17 +43,14 @@ function goBack() {
     <img class="header_logo" height="80px" src="../Assets/logoBlack.png" width="auto">
 </div>
 <div class="container">
-    <form action="/action_page.php">
+    <form action="createExercise.php" method="post">
         <div>
-
             <label class="labelText">Podaj dane aby utworzyć zadanie.</label>
-
-            <input name="gname" placeholder="Tytuł zadania" required type="text">
-
+            <input name="exerciseName" placeholder="Tytuł zadania" required type="text">
             <textarea cols="50" name="details" placeholder="Szczegóły zadania" required rows="8"></textarea>
-            <textarea cols="50" name="details" placeholder="Wymagania dotyczące zadania oddzielone enterem" required
+            <textarea cols="50" name="requirements" placeholder="Wymagania dotyczące zadania oddzielone enterem" required
                       rows="4"></textarea>
-            <textarea cols="50" name="details" placeholder="(Opcjonalne) wskazówki oddzielone enterem"
+            <textarea cols="50" name="hints" placeholder="(Opcjonalne) wskazówki oddzielone enterem"
                       rows="4"></textarea>
 
 

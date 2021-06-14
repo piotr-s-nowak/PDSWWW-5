@@ -19,6 +19,7 @@ if (isset($_POST['email'])){
         $_SESSION['name'] = $row['name'];
         $_SESSION['surname'] = $row['surname'];
         $_SESSION['email'] = $email;
+        $_SESSION['id'] =  $row['id'];
         $_SESSION['isteacher'] =  $row['isteacher'];
         // Redirect user to index.php
         echo
@@ -31,12 +32,6 @@ if (isset($_POST['email'])){
 
                  alert("Username/password is incorrect.");
               </script>';
-//         echo "<script language='javascript'>";
-//         echo 'alert("$message");';
-//         echo 'window.location.replace("login.html");';
-//         echo "</script>";
-//         Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('$message');", true);
-//         header("Location: login.html");
 
 	}
 }

@@ -21,7 +21,6 @@
         <div class="leftBox">
             <img class="header_logo" height="30px" src="../Assets/logoBlack.png" width="auto">
         </div>
-
         <div class="rightBox">
             <table align="center">
                 <tr>
