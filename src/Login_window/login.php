@@ -9,7 +9,6 @@ if (isset($_POST['email'])){
 
      $email = $_POST['email'];
      $pass = $_POST['password'];
-
 	//Checking is user existing in the database or not
     $query = "SELECT * FROM `user` WHERE email='$email' and password = '$pass'";
 	$result = mysqli_query($con,$query) or die(mysqli_error($con));
@@ -21,6 +20,10 @@ if (isset($_POST['email'])){
         $_SESSION['email'] = $email;
         $_SESSION['id'] =  $row['id'];
         $_SESSION['isteacher'] =  $row['isteacher'];
+        //TODO
+        //delete this line!
+        $_SESSION['group_id'] = '1';
+
         // Redirect user to index.php
         echo
         header("Location: ../SelectGroupWindow/groupWindow.php");

@@ -17,9 +17,9 @@ if (isset($_POST['exerciseName'])){
     $difficulty =  $_POST['difficulty'];
 //     $deadline = date('Y-M-D',strtotime($_POST['deadline']));
     $deadline = $_POST['deadline'];
-    $teacher_id = $_SESSION['id'];
-
-    $insert = $con->prepare("insert into exercise (teacher_id,name,description,requirements,hints,deadline,difficulty) values (:teacher_id,:name,:description,:requirements,:hints,:deadline,:difficulty)");
+    $teacher_id =  $_SESSION['id'];
+    $group_id =  $_SESSION['group_id'];
+    $insert = $con->prepare("insert into exercise (teacher_id,name,description,requirements,hints,deadline,difficulty,group_id) values (:teacher_id,:name,:description,:requirements,:hints,:deadline,:difficulty,:group_id)");
     $insert->bindParam(':teacher_id',$teacher_id);
     $insert->bindParam(':name',$name);
     $insert->bindParam(':description',$description);
@@ -27,8 +27,9 @@ if (isset($_POST['exerciseName'])){
     $insert->bindParam(':hints',$hints);
         $insert->bindParam(':deadline',$deadline);
     $insert->bindParam(':difficulty',$difficulty);
+    $insert->bindParam(':group_id',$group_id);
     $insert->execute();
-        header("Location: ../SelectExerciseWindow/selectExerciseWindow.php");
+    header("Location: ../SelectExerciseWindow/selectExerciseWindow.php");
 
     }
 else{

@@ -13,6 +13,10 @@
     <script src="exerciseScripts.js" type="text/javascript"></script>
 </head>
 
+
+
+
+
 <body>
 <header>
     <div class="header">
@@ -61,6 +65,27 @@
     </ul>
 </div>
 </body>
+<?php
+//source: https://www.allphptricks.com/simple-user-registration-login-script-in-php-and-mysqli/
+require('../db.php');
+// If form submitted, insert values into the database.
+    $group_id = $_SESSION['group_id']-1;
+    $query = "SELECT * FROM `exercise` WHERE group_id='$group_id'";
+	$results = mysqli_query($con,$query) or die(mysqli_error($con));
+	$is_teacher = $_SESSION['isteacher'];
+
+	$rows = array();
+    while ($row = mysqli_fetch_array($results)) {
+      $rows[] = $row;
+    }
+    echo '<script>';
+	foreach ($rows as &$row) {
+	        $name = $row['name'];
+	        $deadline = $row['deadline'];
+        	echo 'addElement("'.$name.'","'.$deadline.'",'.$is_teacher.');';
+    }
+      echo '</script>';
+?>
 
 </html>
 
