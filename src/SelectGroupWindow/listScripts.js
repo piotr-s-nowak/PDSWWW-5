@@ -3,11 +3,13 @@ const ANIMATION_DELAY = 100;
 
 
 
-function addElement(name,teacher) {
+function addElement(name,teacher,groupID) {
     var list = document.getElementById("listOfGroups");
     var listElement =     document.createElement('li')
     listElement.className = "listElement"
-    listElement.onclick = function(){window.location.href = "../SelectExerciseWindow/selectExerciseWindow.php"}
+    listElement.onclick = function(){
+        createCookie("groupID",groupID,1);
+        window.location.href = "../SelectExerciseWindow/selectExerciseWindow.php"}
     listElement.style.display = "block";
     var groupName = document.createElement('h3')
     groupName.className = "GroupName"
@@ -48,5 +50,17 @@ function addElements(count){
         },ANIMATION_DELAY*animDelay++)
 
     }
+}
+function createCookie(name, value, days) {
+    var expires;
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+    document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
 }
 // const listHTML = "sa"

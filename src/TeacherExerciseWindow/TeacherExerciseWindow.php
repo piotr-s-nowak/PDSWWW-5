@@ -9,6 +9,14 @@ include("../auth.php");
     $query = "SELECT * FROM `exercise` WHERE id='$exercise_id'";
     $result = mysqli_query($con,$query) or die(mysqli_error($con));
     $row = mysqli_fetch_array($result);
+    $group_id = $row['group_id'];
+
+    $query = "SELECT * FROM `user` WHERE group_id = '$group_id '";
+    $result = mysqli_query($con,$query) or die(mysqli_error($con));
+	$users = array();
+      while ($temp = mysqli_fetch_array($result)) {
+          $users[] = $temp;
+        }
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +83,13 @@ include("../auth.php");
                 $all_requirements = $row['requirements'];
                 $rows = explode("\n", $all_requirements);
                 foreach ($rows as &$line){
-                    echo '<li>'.$line.'</li>';
+                    if (empty($line)==false){
+                           echo '<li>'.$line.'</li>';
+                       }
+                       else{
+                           echo '<li> brak  </li>';
+                           break;
+                       }
                 }
             ?>
         </ul>
@@ -93,7 +107,13 @@ include("../auth.php");
                 $all_hints = $row['hints'];
                 $rows = explode("\n", $all_hints);
                 foreach ($rows as &$line){
-                    echo '<li>'.$line.'</li>';
+                    if (empty($line)==false){
+                        echo '<li>'.$line.'</li>';
+                    }
+                    else{
+                        echo '<li> brak  </li>';
+                        break;
+                    }
                 }
             ?>
         </ul>

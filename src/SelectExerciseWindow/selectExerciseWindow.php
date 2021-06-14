@@ -66,7 +66,7 @@
 </body>
 <?php
 require('../db.php');
-    $group_id = $_SESSION['group_id']-1;
+    $group_id = $_COOKIE["groupID"];
     $query = "SELECT * FROM `exercise` WHERE group_id='$group_id'";
 	$results = mysqli_query($con,$query) or die(mysqli_error($con));
 	$is_teacher = $_SESSION['isteacher'];

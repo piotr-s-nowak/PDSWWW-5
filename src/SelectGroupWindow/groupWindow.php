@@ -1,7 +1,7 @@
 <?php
     include("../auth.php");
     include("../db.php");
-   
+
 ?>
 
 <!DOCTYPE html>
@@ -62,9 +62,9 @@
             </h3>
 
        </li>
-       
-     
-   	 <?php 
+
+
+   	 <?php
    	 $tutor = $_SESSION["email"];
    	 $query = "SELECT * FROM groups WHERE tutor='$tutor'";
    	 $results = mysqli_query($con,$query) or die(mysqli_error($con));
@@ -72,23 +72,20 @@
    	  while ($row = mysqli_fetch_array($results)) {
      	 $rows[] = $row;
     }
-    
     echo '<script>';
    foreach ($rows as &$row) {
 	        $name = $row['name'];
 	        $tutor = $row['tutor'];
-	        
-        	echo 'addElement("'.$name.'","'.$tutor.'");';
-    }
-   
-    echo '</script>';
-	
-   	 
+	        $group_id = $row['ID'];
 
+        	echo 'addElement("'.$name.'","'.$tutor.'","'.$group_id.'");';
+    }
+
+    echo '</script>';
 	?>
-      
+
     </ul>
-     
+
 </div>
 </body>
 
