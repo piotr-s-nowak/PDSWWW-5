@@ -8,6 +8,7 @@ function addElement(name,teacher,groupID) {
     var listElement =     document.createElement('li')
     listElement.className = "listElement"
     listElement.onclick = function(){
+        console.log(groupID);
         createCookie("groupID",groupID,1);
         window.location.href = "../SelectExerciseWindow/selectExerciseWindow.php"}
     listElement.style.display = "block";

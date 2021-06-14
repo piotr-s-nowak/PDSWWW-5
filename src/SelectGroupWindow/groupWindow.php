@@ -78,7 +78,7 @@
 	        $tutor = $row['tutor'];
 	        $group_id = $row['ID'];
 
-        	echo 'addElement("'.$name.'","'.$tutor.'","'.$group_id.'");';
+        	echo 'addElement("'.$name.'","'.$tutor.'",'.$group_id.');';
     }
 
     echo '</script>';

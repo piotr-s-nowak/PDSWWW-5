@@ -18,7 +18,7 @@ if (isset($_POST['exerciseName'])){
 //     $deadline = date('Y-M-D',strtotime($_POST['deadline']));
     $deadline = $_POST['deadline'];
     $teacher_id =  $_SESSION['id'];
-    $group_id =  $_SESSION['group_id'];
+    $group_id =  $_COOKIE['groupID'];
     $insert = $con->prepare("insert into exercise (teacher_id,name,description,requirements,hints,deadline,difficulty,group_id) values (:teacher_id,:name,:description,:requirements,:hints,:deadline,:difficulty,:group_id)");
     $insert->bindParam(':teacher_id',$teacher_id);
     $insert->bindParam(':name',$name);
